@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 #define MAX_TEXT_LEN 12
 #define TEXT_ADDR 0x004513bf
