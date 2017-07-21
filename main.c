@@ -6,6 +6,9 @@
 #define TEXT_ADDR 0x004513bf
 #define JUMP_ADDR 0x00077970
 
+/*
+ * Modify upper right corner text (UNREGISTERED)
+ */
 void patch_text(FILE* file, const char* text)
 {
     fseek(file, TEXT_ADDR, SEEK_SET);
@@ -13,6 +16,9 @@ void patch_text(FILE* file, const char* text)
     rewind(file);
 }
 
+/*
+ * jne -> jmp, prevent licence's window from popping
+ */
 void patch_licence_window(FILE* file)
 {
     fseek(file, JUMP_ADDR, SEEK_SET);
